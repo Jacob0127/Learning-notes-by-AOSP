@@ -1,0 +1,71 @@
+# Java
+
+在Java中，字符串拼接时，可以有非字符串类型的拼接
+
+```java
+int age = 18;
+String name = "小明";
+System.out.println("大家好，我叫" + name + "今年" + age + "岁了");
+```
+
+控制台输出如下：
+
+![image-20260114232314896](C:\Users\64498\AppData\Roaming\Typora\typora-user-images\image-20260114232314896.png)
+
+# Python
+
+在Python中，字符串拼接时，如果存在非字符串类型的变量，无法拼接，会报错
+
+```python
+a = 10
+print("a:" + a)
+```
+
+控制台输出如下：
+
+```bash
+Traceback (most recent call last):
+  File "E:\ideaCode\PythonCode\py1\py01.py", line 2, in <module>
+    print("a:" + a)
+          ~~~~~^~~
+TypeError: can only concatenate str (not "int") to str
+```
+
+## 解决办法：
+
+### `str()`函数
+
+```python
+a = 10
+print("a:" + str(a))
+```
+
+控制台输出如下：
+
+```bash
+a:10
+```
+
+### 字符串格式化
+
+#### 语法一：
+
+```python
+s1 = "Jacob"
+print("大家好，我是%s，我现在开始学习Python字符串拼接了" % s1)
+
+----------
+s2 = "Python"
+s3 = "大家好"
+print("%s，我是%s，我现在开始学习%s字符串拼接了" % (s3, s1, s2))
+```
+
+#### 语法二（推荐！！）：
+
+通过`f"内容{变量/表达式}"`的形式来完成快速格式化
+
+```python
+name = "jacob"
+print(f"大家好，我是 {name}")
+```
+

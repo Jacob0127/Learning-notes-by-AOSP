@@ -1,0 +1,4 @@
+未add（仅工作区修改）:使用git checkout filename（丢弃单个文件的修改）如之前处理未暂存的新建文件修改。
+已add未commit:使用git reset HEAD filename(撤回暂存)->git checkout filename(丢弃修改)
+已commit未push：使用git reset --soft HEAD~1(保留修改，回到暂存区)或者使用git reset --hard HEAD~1(彻底丢弃修改，谨慎使用)
+已push到远程：git revert HEAD(创建新提交抵消原提交，保留历史)，避免reset导致远程历史不一致
